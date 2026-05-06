@@ -19,6 +19,10 @@ RewriteCond %{THE_REQUEST} \s/+dataforge/index\.html[\s?] [NC]
 RewriteRule ^index\.html$ /dataforge/ [R=301,L,NC]
 
 RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{THE_REQUEST} \s/+dataforge/index[\s?] [NC]
+RewriteRule ^index/?$ /dataforge/ [R=301,L,NC]
+
+RewriteCond %{REQUEST_METHOD} =GET
 RewriteCond %{THE_REQUEST} \s/+dataforge/pages/(about|services|contact)\.html[\s?] [NC]
 RewriteRule ^pages/(about|services|contact)\.html$ /dataforge/$1 [R=301,L,NC]
 
@@ -31,6 +35,7 @@ RewriteCond %{THE_REQUEST} \s/+dataforge/operations/(login|logout)\.php[\s?] [NC
 RewriteRule ^operations/(login|logout)\.php$ /dataforge/operations/$1 [R=301,L,NC]
 
 RewriteRule ^(about|services|contact)/?$ pages/$1.html [L,QSA,NC]
+RewriteRule ^index/?$ index.html [L,QSA,NC]
 RewriteRule ^api/contact/?$ api/contact-submit.php [L,QSA,NC]
 RewriteRule ^operations/login/?$ operations/login.php [L,QSA,NC]
 RewriteRule ^operations/logout/?$ operations/logout.php [L,QSA,NC]

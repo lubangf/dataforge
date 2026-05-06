@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Data Forge</title>
+  <meta name="description" content="Contact Data Forge to discuss your product goals and delivery timeline." />
+  <link rel="icon" href="assets/img/dataforge-mark-orange.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Sora:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="grid-texture"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index" aria-label="Data Forge Home">
+        <img class="brand-logo" src="assets/img/dataforge-mark-orange.jpg" alt="Data Forge mark" />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index">Home</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="about">About</a></li>
+          <li><a class="current" href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary" href="contact">Start Project</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container page-hero">
+      <p class="kicker">Contact</p>
+      <h1>Tell us what you need to ship next.</h1>
+      <p>Share your timeline, product constraints, and current blockers. We will respond with a practical path forward.</p>
+    </section>
+
+    <section class="container section">
+      <article class="card">
+        <h3>Project Intake</h3>
+        <form class="contact-form">
+          <label>
+            Name
+            <input type="text" placeholder="Your name" />
+          </label>
+          <label>
+            Work Email
+            <input type="email" placeholder="name@company.com" />
+          </label>
+          <label>
+            What do you need most?
+            <select>
+              <option>Discovery and planning</option>
+              <option>Platform build</option>
+              <option>Legacy modernization</option>
+              <option>Delivery recovery</option>
+            </select>
+          </label>
+          <label>
+            Context
+            <textarea rows="5" placeholder="Current system, constraints, deadline"></textarea>
+          </label>
+          <button class="btn btn-primary" type="button">Send Inquiry</button>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; <span id="year"></span> Data Forge. All rights reserved.</p>
+      <a href="index">Back to home</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+Options -Indexes
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-site"
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; object-src 'none'; img-src 'self' data:; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; upgrade-insecure-requests; block-all-mixed-content"
+</IfModule>
+
+RewriteEngine On
+RewriteBase /dataforge/
+
+# Redirect only direct browser requests for .html files.
+RewriteCond %{THE_REQUEST} \s/+dataforge/index\.html[\s?] [NC]
+RewriteRule ^index\.html$ /dataforge/ [R=301,L,NC]
+
+RewriteCond %{THE_REQUEST} \s/+dataforge/pages/(about|services|contact)\.html[\s?] [NC]
+RewriteRule ^pages/(about|services|contact)\.html$ /dataforge/$1 [R=301,L,NC]
+
+RewriteRule ^(about|services|contact)/?$ pages/$1.html [L,QSA,NC]

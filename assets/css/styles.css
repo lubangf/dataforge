@@ -134,11 +134,11 @@ body {
 .nav-links a {
   text-decoration: none;
   color: var(--muted);
-  font-family: "Rajdhani", "Sora", sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-family: "Sora", "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
 }
 
 .nav-links a:hover,
@@ -285,6 +285,14 @@ main {
   font-size: 0.92rem;
 }
 
+.form-status {
+  min-height: 1.2rem;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #8b4a17;
+}
+
 input,
 textarea,
 select {
@@ -314,5 +322,187 @@ select:focus {
 @media (max-width: 760px) {
   .nav-links {
     display: none;
+  }
+}
+
+.ops-main {
+  padding-top: 2rem;
+}
+
+.ops-login {
+  max-width: 560px;
+}
+
+.ops-note {
+  color: var(--muted);
+}
+
+.ops-error {
+  color: #a22;
+  font-weight: 700;
+}
+
+.ops-table-wrap {
+  margin-top: 1rem;
+  overflow: auto;
+}
+
+.ops-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 860px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 0.8rem;
+}
+
+.ops-table th,
+.ops-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.65rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.ops-table th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.ops-table td {
+  font-size: 0.92rem;
+}
+
+.ops-inline {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.ops-inline input,
+.ops-inline select,
+.ops-inline textarea {
+  font: inherit;
+  width: 100%;
+}
+
+.ops-inline textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.ops-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ops-top h1 {
+  margin: 0.4rem 0 0;
+}
+
+.ops-top p {
+  margin: 0.5rem 0 0;
+}
+
+.ops-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.ops-kpi {
+  padding: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 0.8rem;
+  background: var(--panel);
+}
+
+.ops-kpi p {
+  margin: 0;
+}
+
+.ops-kpi strong {
+  font-size: 1.2rem;
+}
+
+.ops-filter {
+  display: flex;
+  gap: 0.6rem;
+  align-items: end;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.ops-filter label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.ops-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.ops-row-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 0.5rem;
+  align-items: end;
+}
+
+.ops-success {
+  margin-top: 0.8rem;
+  color: #8a4e15;
+  font-weight: 600;
+}
+
+@media (max-width: 980px) {
+  .ops-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ops-row-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ops-row-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .ops-main {
+    padding-top: 1.6rem;
+  }
+
+  .ops-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ops-kpi {
+    padding: 0.75rem;
+  }
+
+  .ops-filter {
+    align-items: stretch;
+  }
+
+  .ops-filter label {
+    width: 100%;
+  }
+
+  .ops-filter .btn {
+    width: 100%;
+  }
+
+  .ops-table {
+    min-width: 700px;
   }
 }

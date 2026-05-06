@@ -1,0 +1,5 @@
+# Runtime data and local artifacts
+data/
+
+# Temporary notes
+*.tmp

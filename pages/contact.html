@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Data Forge</title>
   <meta name="description" content="Contact Data Forge to discuss your product goals and delivery timeline." />
-  <link rel="icon" href="assets/img/dataforge-mark-orange.jpg" />
+  <link rel="icon" type="image/png" href="assets/img/dataforge-mark-orange.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Sora:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260506-1" />
 </head>
 <body>
   <div class="bg-layer" aria-hidden="true">
@@ -21,7 +21,7 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index" aria-label="Data Forge Home">
-        <img class="brand-logo" src="assets/img/dataforge-mark-orange.jpg" alt="Data Forge mark" />
+        <img class="brand-logo" src="assets/img/dataforge-mark-orange.png" alt="Data Forge mark" />
       </a>
       <nav>
         <ul class="nav-links">
@@ -45,18 +45,18 @@
     <section class="container section">
       <article class="card">
         <h3>Project Intake</h3>
-        <form class="contact-form">
+        <form class="contact-form js-contact-form" data-endpoint="/dataforge/api/contact" aria-label="Project Intake Form">
           <label>
             Name
-            <input type="text" placeholder="Your name" />
+            <input type="text" name="name" placeholder="Your name" required />
           </label>
           <label>
             Work Email
-            <input type="email" placeholder="name@company.com" />
+            <input type="email" name="email" placeholder="name@company.com" required />
           </label>
           <label>
             What do you need most?
-            <select>
+            <select name="primaryNeed">
               <option>Discovery and planning</option>
               <option>Platform build</option>
               <option>Legacy modernization</option>
@@ -65,9 +65,10 @@
           </label>
           <label>
             Context
-            <textarea rows="5" placeholder="Current system, constraints, deadline"></textarea>
+            <textarea name="context" rows="5" placeholder="Current system, constraints, deadline"></textarea>
           </label>
-          <button class="btn btn-primary" type="button">Send Inquiry</button>
+          <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </article>
     </section>
@@ -80,6 +81,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/app.js"></script>
+  <script src="assets/js/app.js?v=20260506-1"></script>
 </body>
 </html>

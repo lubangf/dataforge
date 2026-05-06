@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Data Forge</title>
-  <meta name="description" content="Contact Data Forge to discuss your product goals and delivery timeline." />
+  <meta name="description" content="Contact Data Forge to discuss pilots, deployments, or portfolio-specific product demos." />
   <link rel="icon" type="image/png" href="assets/img/dataforge-mark-orange.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,26 +26,26 @@
       <nav>
         <ul class="nav-links">
           <li><a href="/dataforge/">Home</a></li>
-          <li><a href="services">Services</a></li>
+          <li><a href="services">Portfolio</a></li>
           <li><a href="about">About</a></li>
           <li><a class="current" href="contact">Contact</a></li>
         </ul>
       </nav>
-      <a class="btn btn-primary" href="contact">Start Project</a>
+      <a class="btn btn-primary" href="contact">Request a Demo</a>
     </div>
   </header>
 
   <main>
     <section class="container page-hero">
       <p class="kicker">Contact</p>
-      <h1>Tell us what you need to ship next.</h1>
-      <p>Share your timeline, product constraints, and current blockers. We will respond with a practical path forward.</p>
+      <h1>Tell Us Which Product Line You Want to Activate.</h1>
+      <p>Share your institution type, operational pain points, and rollout timeline. We will respond with a practical pilot or implementation path.</p>
     </section>
 
     <section class="container section">
       <article class="card">
-        <h3>Project Intake</h3>
-        <form class="contact-form js-contact-form" data-endpoint="/dataforge/api/contact" aria-label="Project Intake Form">
+        <h3>Portfolio Intake</h3>
+        <form class="contact-form js-contact-form" data-endpoint="/dataforge/api/contact" aria-label="Portfolio Intake Form">
           <label>
             Name
             <input type="text" name="name" placeholder="Your name" required />
@@ -55,19 +55,28 @@
             <input type="email" name="email" placeholder="name@company.com" required />
           </label>
           <label>
-            What do you need most?
+            Which product line is your current priority?
             <select name="primaryNeed">
-              <option>Discovery and planning</option>
-              <option>Platform build</option>
-              <option>Legacy modernization</option>
-              <option>Delivery recovery</option>
+              <option>Flagship Credit Platform</option>
+              <option>Re-Match Reconciliation Platform</option>
+              <option>bank360 Performance Suite</option>
+              <option>paysasa</option>
+              <option>Microfinance and SACCO Platform</option>
+              <option>pesanexus Data Hub</option>
+              <option>Data and Analytics | Business Intelligence</option>
+              <option>Data Engineering</option>
+              <option>Training Academy</option>
+              <option>AI and Automation Advisory</option>
+              <option>Adoption and Usage Advisory</option>
+              <option>Readiness Assessment</option>
+              <option>Implementation and Advisory Services</option>
             </select>
           </label>
           <label>
             Context
-            <textarea name="context" rows="5" placeholder="Current system, constraints, deadline"></textarea>
+            <textarea name="context" rows="5" placeholder="Current process, key blockers, expected outcome, and timeline"></textarea>
           </label>
-          <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          <button class="btn btn-primary" type="submit">Send Request</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </article>
